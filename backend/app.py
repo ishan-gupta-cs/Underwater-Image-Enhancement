@@ -21,7 +21,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 generator = Generator().to(device)
 
 # Load model checkpoint
-checkpoint_path = "checkpoints/epoch_549.pth"
+checkpoint_path = "epoch_549.pth"
 checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=True)
 generator.load_state_dict(checkpoint['generator_state_dict'])
 generator.eval()
