@@ -1,0 +1,14 @@
+/* ImageDisplay.css */
+
+.image-display-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .image-display {
+    width: 100%;
+    max-width: 500px; /* Adjust the maximum width */
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
