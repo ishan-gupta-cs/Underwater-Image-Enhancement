@@ -14,8 +14,8 @@ CORS(app)
 
 UPLOAD_FOLDER = 'uploads'
 OUTPUT_FOLDER = 'outputs'
-os.getenv(UPLOAD_FOLDER, exist_ok=True)
-os.getenv(OUTPUT_FOLDER, exist_ok=True)
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 generator = Generator().to(device)
