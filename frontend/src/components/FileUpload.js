@@ -25,7 +25,7 @@ const handleSubmit = async () => {
     setLoading(true);
 
     try {
-    const response = await axios.post("http://127.0.0.1:5000/enhance-image", formData, {
+    const response = await axios.post("https://underwater-image-enhancement-1.onrender.com/enhance-image", formData, {
         responseType: "blob",
     });
     const imageUrl = URL.createObjectURL(response.data);
