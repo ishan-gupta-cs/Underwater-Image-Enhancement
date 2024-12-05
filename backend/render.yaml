@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: flask-image-enhancement
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app --workers 3 --bind 0.0.0.0:8000"
+    envVars:
+      - key: UPLOAD_FOLDER
+        value: "/tmp/uploads"
+      - key: OUTPUT_FOLDER
+        value: "/tmp/outputs"
+    disk:
+      sizeGB: 1  # Optional, specify if you want persistent disk storage
+
