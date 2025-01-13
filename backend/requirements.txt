@@ -7,3 +7,4 @@ pyyaml
 cloudinary
 flask
 flask_cors
+gunicorn
