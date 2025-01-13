@@ -1,0 +1,131 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body background video */
+body {
+  font-family: 'Arial', sans-serif;
+  height: 100vh;
+  background: #000;
+  overflow: hidden;
+}
+
+.background-video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; 
+}
+
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+
+/* Container for the upload section */
+.upload-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1; /* Ensures the upload section stays above the video */
+  color: white;
+  padding-top: 20px;
+}
+
+/* Styling the h1 */
+h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Add shadow for better visibility */
+}
+
+/* Flexbox for image display */
+.image-display-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image-display {
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+  width: 48%;
+  margin-bottom: 20px;
+}
+
+.image-preview {
+  max-width: 100%;
+  height: auto;
+  max-height: 600px;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  padding: 5px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-preview:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .image-display-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-display {
+    width: 80%;
+  }
+
+  .file-input {
+    margin-bottom: 10px;
+    width: 80%;
+  }
+
+  .submit-btn {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .file-input,
+  .submit-btn {
+    width: 100%;
+  }
+
+  .image-display {
+    width: 90%;
+  }
+}
+
+/* Animation for fading in elements */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
