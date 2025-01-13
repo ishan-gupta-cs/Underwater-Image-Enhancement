@@ -6,3 +6,4 @@ scikit-image
 pyyaml
 cloudinary
 flask
+flask_cors
