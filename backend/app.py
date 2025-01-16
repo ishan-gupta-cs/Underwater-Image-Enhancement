@@ -18,9 +18,9 @@ CORS(app)
 
 # Cloudinary configuration
 cloudinary.config(
-    cloud_name="dtqefxx25",  # Replace with your Cloudinary cloud name
-    api_key="932591589459463",       # Replace with your Cloudinary API key
-    api_secret="NYRrJzCVbKw9XQfsdoDZPQe1h5w", # Replace with your Cloudinary API secret
+    cloud_name="",  # Replace with your Cloudinary cloud name
+    api_key="",       # Replace with your Cloudinary API key
+    api_secret="", # Replace with your Cloudinary API secret
 )
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
